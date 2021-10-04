@@ -1,0 +1,242 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    text-decoration: none; /* tira as diagramações das âncoras */
+    font-family: sans-serif;
+    font-size: 14px;
+}
+
+:root {
+    --background-color: #fafafa;
+    --white: #ffffff;
+    --border-color: 112, 112, 112;
+    --placeholder-color: #837979;
+    --or-text: #8e8e8e;
+    --fb-logo: #385185;
+    --login-button: #0095f6;
+    --black: #262626;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    width: 100%;
+    min-height: 100vh;
+    background-color: var(--background-color);
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+}
+
+.instagram-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    width: 60%;
+    height: 100vh;
+}
+
+.instagram-phone {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50%;
+}
+
+.instagram-phone img {
+    height: 55rem;
+}
+
+.login-container {
+    display: flex;
+    align-items: center; 
+    justify-content: space-around; 
+    flex-direction: column; 
+    width: 50%;
+    min-height: 34rem;
+}
+
+.group {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+    background-color: var(--white);
+    width: 100%;
+    padding: 1.3rem 0;
+    border: 1px solid rgba(var(--border-color), 0.5); 
+    margin-bottom: 1.3rem;
+
+}
+
+.group:nth-child(1) {
+    min-height: 19rem;
+}
+
+.instagram-logo {
+    height: 12rem;
+}
+
+.login-form {
+    display: flex;
+    flex-direction: column;
+    width: 70%;
+}
+
+.login-form input,
+.login-button {
+    padding: 1rem 0 1rem 1rem;
+    border-radius: 0.5rem;
+}
+
+.login-form input,
+.login-form input::placeholder {
+    font-size: 1.1rem;
+}
+
+.login-form input{
+    background: var(--background-color);
+    border: 0.1rem solid rgba(var(--border-color), 0.5);
+    outline: none;
+}
+
+.login-form input[type="text"] {
+    margin-bottom: 0.5rem;
+}
+
+.login-form input::placeholder {
+    color: var(--placeholder-color);
+}
+
+.login-form input:focus {
+    border-color: rgba(var(--border-color), 0.8);
+}
+
+.login-button {
+    background: var(--login-button);
+    color: var(--white);
+    margin: 2rem 0;
+    font-weight: 700;
+    cursor: pointer;
+    outline: none;
+    border: none;
+}
+
+.or-divisor {
+    color: var(--or-text);
+    font-weight: 700;
+    position: relative;
+    font-size: 1.2rem;
+}
+
+.or-divisor::before,
+.or-divisor::after {
+    content: "";
+    display: block;
+    width: 11rem;
+    height: 0.1rem;
+    position: absolute;
+    background: rgba(var(--border-color), 0.4);
+    top: 50%;
+}
+
+.or-divisor::before {
+    left: 3rem;
+}
+
+.or-divisor::after {
+    right: 3rem;
+}
+
+.fb-login {
+    margin: 1.5rem;
+}
+
+.fb-login img,
+.fb-login span {
+    vertical-align: middle;
+}
+
+.fb-login img {
+    width: 1.5rem;
+    margin-right: 0.5rem;
+}
+
+.fb-login span {
+    font-size: 1.3rem;
+    color: var(--fb-logo);
+    font-weight: 700;
+}
+
+.forgot-password {
+    color: var(--fb-logo);
+    font-size: 1.2rem;
+}
+
+.group-2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--white);
+    width: 100%;
+    padding: 1.3rem 0;
+    border: 1px solid rgba(var(--border-color), 0.5); 
+    margin-bottom: 1.3rem;
+}
+
+.no-account {
+    font-size: 1.3rem;
+    margin-right: 0.5rem;
+}
+
+
+.sign-up{
+    font-size: 1.3rem;
+    font-weight: 700;
+    color: var(--login-button);
+}
+
+.get-app {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 100%;
+    padding: 1.3rem 0;
+}
+
+.get-app span {
+    display: block;
+    margin-bottom: 2rem;
+    font-size: 1.4rem;
+}
+
+.download-images img {
+    width: 13rem;
+}
+
+/* media queries */
+
+@media (max-width: 1024px) {
+    .instagram-wrapper {
+        width: 90%;
+    }
+}
+
+@media (max-width: 650px) {
+    .instagram-wrapper {
+        width: 90%;
+    }
+
+    .instagram-phone {
+        display: none;
+    }
+
+    .login-container {
+        width: 100%;
+    }
+}
